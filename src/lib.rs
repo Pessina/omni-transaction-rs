@@ -130,21 +130,21 @@
 //! omni-transaction = { version = "0.2.1", features = ["evm"] }
 //! ```
 //!
-#[cfg(feature = "bitcoin")]
-pub mod bitcoin;
+// #[cfg(feature = "bitcoin")]
+// pub mod bitcoin;
 mod constants;
 #[cfg(feature = "evm")]
 pub mod evm;
-#[cfg(feature = "near")]
-pub mod near;
-pub mod signer;
+// #[cfg(feature = "near")]
+// pub mod near;
+// pub mod signer;
 mod transaction_builder;
 mod transaction_builders;
 
 pub use transaction_builder::{TransactionBuilder, TxBuilder};
 /// Alias for BitcoinTransactionBuilder
-pub use transaction_builders::BITCOIN;
+// pub use transaction_builders::BITCOIN;
 /// Alias for EVMTransactionBuilder
 pub use transaction_builders::EVM;
-/// Alias for NearTransactionBuilder
-pub use transaction_builders::NEAR;
+// Alias for NearTransactionBuilder
+// pub use transaction_builders::NEAR;
