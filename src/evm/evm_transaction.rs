@@ -1,5 +1,4 @@
-//! EVM transaction
-use near_sdk::serde::{Deserialize, Serialize};
+use serde::{Deserialize, Serialize};
 use rlp::RlpStream;
 use schemars::JsonSchema;
 
@@ -34,7 +33,6 @@ use super::utils::parse_eth_address;
 /// ```
 ///
 #[derive(Debug, Serialize, Deserialize, JsonSchema)]
-#[serde(crate = "near_sdk::serde")]
 pub struct EVMTransaction {
     pub chain_id: u64,
     pub nonce: u64,
@@ -113,8 +111,8 @@ impl EVMTransaction {
         }
     }
 
-    pub fn from_json(json: &str) -> Result<Self, near_sdk::serde_json::Error> {
-        let v: near_sdk::serde_json::Value = near_sdk::serde_json::from_str(json)?;
+    pub fn from_json(json: &str) -> Result<Self, serde_json::Error> {
+        let v: serde_json::Value = serde_json::from_str(json)?;
 
         let to = v["to"].as_str().unwrap_or_default().to_string();
 

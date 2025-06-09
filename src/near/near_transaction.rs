@@ -26,7 +26,6 @@ use super::types::{Action, BlockHash, PublicKey, Signature, U64};
 /// };
 /// ```
 #[derive(Serialize, Deserialize, Debug, Clone, BorshSerialize, BorshDeserialize, JsonSchema)]
-#[serde(crate = "near_sdk::serde")]
 pub struct NearTransaction {
     /// An account on which behalf transaction is signed
     pub signer_id: AccountId,

@@ -30,20 +30,20 @@ near = []
 rlp = "0.6.1"
 hex = "0.4.3"
 borsh = { version = "1.0.0", features = ["derive"] }
-near-sdk = { version = "5.3.0", features = ["schemars"] }
-near-account-id = { version = "1.0.0", features = ["schemars"] }
 serde-big-array = "0.5.1"
 bs58 = "0.5.1"
-serde = "1.0"
-serde_json = "1.0"
-schemars = { version = "0.8" }
+serde = "1.0.219"
+serde_json = "1.0.140"
+schemars = { version = "0.9.0" }
 sha2 = { version = "0.10.8", optional = true }
+near-sdk = { version = "5.14.0", features = ["schemars"] }
+near-account-id = { version = "1.1.1", features = ["schemars"] }
 
 [dev-dependencies]
 # ethereum
-alloy = { version = "0.3.3", features = ["full", "node-bindings", "rlp"] }
-alloy-rlp = { version = "0.3.8", features = ["derive"] }
-alloy-primitives = { version = "0.8.3" }
+alloy = { version = "1.0.9", features = ["full", "node-bindings", "rlp"] }
+alloy-rlp = { version = "0.3.12", features = ["derive"] }
+alloy-primitives = { version = "1.2.0" }
 
 # near
 near-primitives = { version = "0.25.0" }
@@ -55,7 +55,7 @@ near-workspaces = { version = "0.13.0", features = [
 ] }
 
 # bitcoin
-bitcoin = { version = "0.32.0", default-features = false, features = [
+bitcoin = { version = "0.32.6", default-features = false, features = [
     "std",
     "serde",
     "rand-std",
